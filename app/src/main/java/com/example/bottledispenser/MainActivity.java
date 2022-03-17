@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;

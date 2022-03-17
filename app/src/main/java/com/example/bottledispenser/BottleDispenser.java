@@ -20,8 +20,6 @@ public class BottleDispenser {
         return bottles;
     }
 
-
-
     private BottleDispenser() {
         bottles = 10;
         money = 0;
@@ -73,14 +71,13 @@ public class BottleDispenser {
         }
     }
 
-    public double addMoney(int i) {
+    public void addMoney(int i) {
         money += i;
         System.out.println("Klink! Added more money!");
-        return money;
     }
 
     public int buyBottle2(int b_index) {
-        Bottle b, btl;
+        Bottle b;
         int i, j = 0;
         double size = 0;
         String name = "";
@@ -105,7 +102,7 @@ public class BottleDispenser {
         }
         for(i = 0; i < bottles; i++) {
             b = bottle_array.get(i);
-            if((name.equals(b.getName()) == true && b.getSize() == size)) {
+            if((name.equals(b.getName()) && b.getSize() == size)) {
                 if(b.getPrize() > money) {
                     j = 2;
                     break;
@@ -123,26 +120,6 @@ public class BottleDispenser {
         System.out.println("j: " + j);
         return j;
     }
-
-
-    public Bottle buyBottle(int b_index) {
-        Bottle b = bottle_array.get(b_index-1);
-        if(bottles <= 0) {
-            System.out.println("No more bottles!");
-        }
-        else if(money < b.getPrize()) {
-            System.out.println("Add money first!");
-        }
-        else {
-            bottles -= 1;
-            money -= b.getPrize();
-            System.out.println("KACHUNK! " + b.getName() + " came out of the dispenser!");
-            deleteBottle(b);
-        }
-        return b;
-    }
-
-
 
     public ArrayList listBottles() {
         for(int i = 0; i < bottles; i++) {

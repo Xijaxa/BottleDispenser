@@ -7,13 +7,6 @@ public class Bottle {
     private final double size;
     private final double prize;
 
-    public Bottle() {
-        name = "Pepsi Max";
-        manufacturer = "Pepsi";
-        total_energy = 0.3;
-        size = 0.5;
-        prize = 1.80;
-    }
 
     public Bottle(String n, String m, double t, double s, double p) {
         name = n;
