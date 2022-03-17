@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BottleDispenser</string>
+    <string-array name="bottle_types">
+        <item>1.  Pepsi Max     0,5l.    1,80€</item>
+        <item>2.  Pepsi Max     1,5l.    2,20€</item>
+        <item>3.  Coca-Cola     0,5l.    2,00€</item>
+        <item>4.  Coca-Cola     1,5l.    2,50€</item>
+        <item>5.  Fanta Zero    0,5l.    1,95€</item>
+        <item>6.  Fanta Zero    1,5l.    2,35€</item>
+    </string-array>
+</resources>
