@@ -81,17 +81,17 @@ public class BottleDispenser {
         int i, j = 0;
         double size = 0;
         String name = "";
-        if(b_index == 1) {
+        if(b_index == 1) {           // Vertailuarvojen asettaminen
             name = "Pepsi Max";
             size = 0.5;
         } else if (b_index == 2) {
             name = "Pepsi Max";
             size = 1.5;
         } else if (b_index == 3) {
-            name = "Coca-Cola";
+            name = "Coca-Cola Zero";
             size = 0.5;
         } else if (b_index == 4) {
-            name = "Coca-Cola";
+            name = "Coca-Cola Zero";
             size = 1.5;
         } else if (b_index == 5) {
             name = "Fanta Zero";
@@ -100,7 +100,7 @@ public class BottleDispenser {
             name = "Fanta Zero";
             size = 1.5;
         }
-        for(i = 0; i < bottles; i++) {
+        for(i = 0; i < bottles; i++) {  // Käydään lista läpi ja katsotaan löytyykö haluttua pulloa
             b = bottle_array.get(i);
             if((name.equals(b.getName()) && b.getSize() == size)) {
                 if(b.getPrize() > money) {
@@ -122,11 +122,6 @@ public class BottleDispenser {
     }
 
     public ArrayList listBottles() {
-        for(int i = 0; i < bottles; i++) {
-            System.out.println(i+1 + ". Name: " + bottle_array.get(i).getName());
-            System.out.print("\tSize: " + bottle_array.get(i).getSize());
-            System.out.println("\tPrice: €" + bottle_array.get(i).getPrize());
-        }
         return bottle_array;
     }
 
